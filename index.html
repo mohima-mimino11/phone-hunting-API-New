@@ -4,16 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>API Phone Hunter</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- tailwind and daisyui -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="font-poppins">
   <header>
     <h2 class="text-6xl">Hunting Phone</h2>
 
   </header>
-  <main>
+  <main class="container mx-auto">
+    <section class="mt-32 flex flex-col gap-11">
+      <div class="flex flex-col gap-8 justify-center items-center">
+        <h3 class=" text-[#100F0F] text-4xl font-semibold text-center">Search your phone</h3>
+        <div class="h-16 w-[752px] rounded-lg  bg-[#100F0F0D] flex justify-between items-center">
+          <input id="search-field" type="text" placeholder="Search" class="bg-[#100F0F0D] text-xs text-[#706F6F] input input-bordered w-full h-full" />
+          <button onclick="handleSearch()" class="btn bg-[#0D6EFD] text-white w-[150px] h-full">Search</button>
+        </div>
+      </div>
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+        <!-- <div class="card bg-white w-96 border border-solid border-[#CFCFCF] rounded-lg">
+          <figure class="px-10 pt-10">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              class="rounded-lg" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
 
   </main>
   <footer>
