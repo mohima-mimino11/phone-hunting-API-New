@@ -20,13 +20,16 @@
 
   </header>
   <main class="container mx-auto">
-    <section class="mt-32 flex flex-col gap-11">
+    <section class="mt-32 flex flex-col gap-11 justify-center items-center">
       <div class="flex flex-col gap-8 justify-center items-center">
         <h3 class=" text-[#100F0F] text-4xl font-semibold text-center">Search your phone</h3>
         <div class="h-16 w-[752px] rounded-lg  bg-[#100F0F0D] flex justify-between items-center">
           <input id="search-field" type="text" placeholder="Search" class="bg-[#100F0F0D] text-xs text-[#706F6F] input input-bordered w-full h-full" />
           <button onclick="handleSearch()" class="btn bg-[#0D6EFD] text-white w-[150px] h-full">Search</button>
         </div>
+      </div>
+      <div id="loading-spinner" class="text-center my-40 hidden">
+        <span class="loading loading-spinner loading-lg"></span>
       </div>
       <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
         <!-- <div class="card bg-white w-96 border border-solid border-[#CFCFCF] rounded-lg">
@@ -44,6 +47,9 @@
             </div>
           </div>
         </div> -->
+      </div>
+      <div id="show-all-container" class="hidden">
+        <button class="bg-[#0D6EFD] w-40 h-16 text-white font-bold text-xl rounded-lg">Show All</button>
       </div>
     </section>
 
