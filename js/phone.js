@@ -71,7 +71,7 @@ const displayShowDetails = (phone) => {
     
     const showDetailsContainer = document.getElementById('show-details-container');
     showDetailsContainer.innerHTML = `
-     <div class="mt-10 flex flex-col items-center gap-5">
+     <div class="mt-10 flex flex-col items-center gap-2 md:gap-3 lg:gap-5 ">
         <figure class=" p-10 bg-[#0D6EFD0D] rounded-lg">
           <img src="${phone.image}" alt="Phone" class="" />
         </figure>
@@ -79,13 +79,24 @@ const displayShowDetails = (phone) => {
           <h3 class="text-2xl font-bold text-[#403F3F]">${phone.name}</h3>
           <p class="text-xs text-[#706F6F]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
           <p class="text-sm text-[#403F3F] font-semibold">Storage: <span class="text-sm text-[#706F6F]">${phone?.mainFeatures?.storage}</span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">Display Size: <span class="text-sm text-[#706F6F]"></span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">Chipset: <span class="text-sm text-[#706F6F]"></span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">Memory: <span class="text-sm text-[#706F6F]"></span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">Slug: <span class="text-sm text-[#706F6F]"></span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">Release Data: <span class="text-sm text-[#706F6F]"></span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">Brand: <span class="text-sm text-[#706F6F]"></span></p>
-          <p class="text-sm text-[#403F3F] font-semibold">GPS: <span class="text-sm text-[#706F6F]"></span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">Display Size: <span class="text-sm text-[#706F6F]">
+          ${phone?.mainFeatures?.displaySize}</span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">Chipset: <span class="text-sm text-[#706F6F]">${phone?.mainFeatures?.chipSet}</span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">Memory: <span class="text-sm text-[#706F6F]">
+          ${phone?.mainFeatures?.memory}
+          </span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">Slug: <span class="text-sm text-[#706F6F]">
+          ${phone?.slug}
+          </span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">Release Data: <span class="text-sm text-[#706F6F]">
+          ${phone?.releaseDate}
+          </span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">Brand: <span class="text-sm text-[#706F6F]">
+          ${phone?.brand}
+          </span></p>
+          <p class="text-sm text-[#403F3F] font-semibold">GPS: <span class="text-sm text-[#706F6F]">
+          ${phone?.others?.GPS}
+          </span></p>
         </div>
          <div class="modal-action self-end">
           <form method="dialog" class="">
@@ -98,7 +109,7 @@ const displayShowDetails = (phone) => {
      
     
     
-    `
+    `; 
 }
 
 
