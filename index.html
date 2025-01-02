@@ -15,12 +15,26 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body class="font-poppins">
-  <header>
-    <h2 class="text-6xl">Hunting Phone</h2>
+  <header class="h-[806px] bg-[#0D6EFD0D]">
+    <div class="flex  justify-between items-center  mx-[150px]">
+      <h2 class="text-[25px] font-bold text-[#403F3F] mt-16 ">Hot Gadgets</h2>
+      <button class="btn btn-info text-white text-xl font-bold mt-16 rounded-lg">Sign Up</button>
+    </div>
+    <div class="text-center mx-[320px] mt-[164px]">
+      <h2 class="font-bold text-[65px] text-[#100F0F]">Apple Iphone 13 Pro Max</h2>
+      <p class="text-lg text-[#706F6F]">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by injected humou.</p>
+      <button class="btn btn-info text-white text-xl font-bold mt-16 rounded-lg">Buy Now</button>
+    </div>
+    <div class="flex justify-center items-center gap-14 mx-[300px] ">
+      <img src="images/pngwing 2.png" class="w-[218px] h-[438px]" alt="">
+      <img src="images/pngwing 1.png" class="w-[293px] h-[585px]" alt="">
+      <img src="images/pngwing 3.png" class="w-[218px] h-[438px]" alt="">
+
+    </div>
 
   </header>
-  <main class="container mx-auto">
-    <section class="mt-32 flex flex-col gap-11 justify-center items-center">
+  <main class="container mx-auto ">
+    <section class="mt-96 flex flex-col gap-11 justify-center items-center">
       <div class="flex flex-col gap-8 justify-center items-center">
         <h3 class=" text-[#100F0F] text-4xl font-semibold text-center">Search your phone</h3>
         <div class="h-16 w-[752px] rounded-lg  bg-[#100F0F0D] flex justify-between items-center">
@@ -31,7 +45,7 @@
       <div id="loading-spinner" class="text-center my-40 hidden">
         <span class="loading loading-spinner loading-lg"></span>
       </div>
-      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mx-auto">
         <!-- <div class="card bg-white w-96 border border-solid border-[#CFCFCF] rounded-lg">
           <figure class="px-10 pt-10">
             <img
@@ -57,13 +71,42 @@
     <!-- Open the modal using ID.showModal() method -->
     
     <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
-      <div id="show-details-container" class="modal-box h-auto max-h-screen overflow-y-auto  ">
+      <div id="show-details-container" class="modal-box  max-h-screen overflow-y-hidden  ">
        
       </div>
     </dialog>
   </main>
-  <footer>
-
+  <footer class=" bg-[#0D6EFD0D] text-black-content p-10 mt-[120px] ">
+    <div class="font-open-sans flex justify-between items-center mb-[50px]">
+      <div>
+        <h3 class="text-[45px] font-bold">Hot Gadgets</h3>
+        <p class="text-lg text-[#706F6F] font-medium">You can definitely work.</p>
+      </div>
+      <button class="btn btn-info text-white text-xl font-bold mt-16 rounded-lg">Join Premium</button>
+    </div>
+    
+    <div class="footer flex justify-between items-center gap-40 border-t border-solid border-[#CFCFCF]">
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </div>
   </footer>
 
   <!-- scripts -->

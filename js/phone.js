@@ -16,7 +16,15 @@ const displayPhones = (phones, isShowAll) => {
   // display show all button if there are more than 6 phones
   if(phones.length > 6 && !isShowAll){
     showAllContainer.classList.remove('hidden');
-  }else{
+  }else if(phones.length === 0){
+      const dataNotFound = document.createElement('div');
+      dataNotFound.classList.add('mx-auto')
+      dataNotFound.innerHTML = `
+        <p class="text-[#403F3F] font-poppins text-3xl font-bold text-center">No Data Found! Please try again.</p>
+      `;
+      phoneContainer.appendChild(dataNotFound);
+  }
+  else{
     showAllContainer.classList.add('hidden');
   }
   
@@ -95,7 +103,7 @@ const displayShowDetails = (phone) => {
           ${phone?.brand}
           </span></p>
           <p class="text-sm text-[#403F3F] font-semibold">GPS: <span class="text-sm text-[#706F6F]">
-          ${phone?.others?.GPS}
+          ${phone?.others?.GPS || 'No GPS'}
           </span></p>
         </div>
          <div class="modal-action self-end">
